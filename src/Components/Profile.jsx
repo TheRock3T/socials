@@ -1,10 +1,11 @@
 import React from "react";
+import prof from './Profile.module.css'
 
 const Profile = () => {
     return (
-        <div className='content'>
+        <div className={prof.content}>
             <div>
-                <img src='https://storge.pic2.me/cm/3200x1800/652/5845d44193214.jpg'></img>
+                <img src='https://canadiankraftpaper.com/wp-content/uploads/2018/05/s-header-forest.jpg'></img>
             </div>
             <div>
                 avatar + description
@@ -15,10 +16,10 @@ const Profile = () => {
                     New post
                 </div>
                 <div>
-                    <div>
+                    <div className={prof.item}>
                         Post 1
                     </div>
-                    <div>
+                    <div className={prof.item}>
                         Post 2
                     </div>
                 </div>
