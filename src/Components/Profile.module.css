@@ -1,0 +1,12 @@
+.content {
+    grid-area: c;
+    background-color: #4700af;
+}
+
+.content img {
+    width: 100%;
+}
+
+.item {
+    color: darkgrey;
+}
