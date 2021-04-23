@@ -2,16 +2,20 @@ import React from "react";
 import post from './MyPosts.module.css'
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
     return (
-        <div>
-            My posts
+        <div className={post.PostsBlock}>
+            <h2>My posts</h2>
             <div>
-                <textarea></textarea>
-                <button>Add new post</button>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add new post</button>
+                </div>
             </div>
             <div className={post.posts}>
-                <Post message='Who you' likes='20' dislikes='2' />
+                <Post message='Who you' likes='20' dislikes='2'/>
                 <Post message='Hello world' likes='999' dislikes='0'/>
 
             </div>
