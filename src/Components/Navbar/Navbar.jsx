@@ -19,9 +19,6 @@ const Navbar = () => {
             <div className={nb.item}>
                 <a>Settings</a>
             </div>
-            <div className={nb.item}>
-                <a>WTF</a>
-            </div>
         </nav>
     )
 }
