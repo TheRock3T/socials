@@ -1,8 +1,12 @@
 .nav {
+
     grid-area: n;
-    background-color: #6f00ec;
+    background-color: #2b2a2a;
     text-align: center;
+
 }
 .item {
     color: white;
+    font-size: 20px;
+    padding-top: 20px;
 }
