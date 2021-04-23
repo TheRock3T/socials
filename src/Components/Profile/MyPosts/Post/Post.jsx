@@ -13,7 +13,7 @@ const Post = (props) => {
             </div>
 
             <span className={post.dislikes}>
-                Dislike {props.dislikes}
+                Dislikes {props.dislikes}
             </span>
         </div>
 
