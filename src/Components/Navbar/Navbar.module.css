@@ -2,11 +2,28 @@
 
     grid-area: n;
     background-color: #2b2a2a;
+    padding: 25px;
     text-align: center;
 
 }
-.item {
+.item a{
     color: white;
     font-size: 20px;
-    padding-top: 20px;
+
+}
+
+.item a{
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+.item a.active {
+    color: #00a4b3;
+}
+
+.item a:hover{
+
+
+    color: #00a4b3;
 }
