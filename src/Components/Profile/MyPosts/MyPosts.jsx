@@ -3,11 +3,15 @@ import post from './MyPosts.module.css'
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-
+    /*Example database*/
     let postData = [
-        {message: 'Who you?', likes: 25, dislikes: 0},
-        {message: 'I React', likes: 999, dislikes: 5}
+        {id: 1, message: 'Who you?', likes: 25, dislikes: 0},
+        {id: 2, message: 'What is that?', likes: 723847, dislikes: 9324823},
+        {id: 3, message: 'New social?', likes: 2445, dislikes: 10},
+        {id: 4, message: 'Hello React', likes: 999, dislikes: 5}
     ]
+
+    let postsElements = postData.map(post => <Post message={post.message} likes={post.likes} dislikes={post.dislikes}/> )
 
     return (
         <div className={post.PostsBlock}>
@@ -21,9 +25,7 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={post.posts}>
-                <Post message={postData[0].message} likes={postData[0].likes} dislikes={postData[0].dislikes}/>
-                <Post message={postData[1].message} likes={postData[1].likes} dislikes={postData[1].dislikes}/>
-
+                {postsElements}
             </div>
         </div>
     )

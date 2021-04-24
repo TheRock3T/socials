@@ -17,33 +17,34 @@ const MessageU = (props) => {
     )
 }
 
-const Dialogs = (props) => {
-
+const Dialogs = () => {
+    /*Example database*/
     let dialogsData = [
         {id: 1, name: 'Dmitry'},
         {id: 2, name: 'Valera'},
         {id: 3, name: 'Alex'},
         {id: 4, name: 'Galina'}
     ]
-
+    /*Example database*/
     let messagesData = [
         {message: 'Hello my friend'},
         {message: 'I love react'},
         {message: 'SPAM SPIM SPIN'}
     ]
 
+    let dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
+
+    let messagesElements = messagesData.map(msg => <MessageU message={msg.message}/> )
+
     return (
         <div className={dial.dialogs}>
             <div className={dial.dialogsItems}>
-                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>
-                <DialogItem name={dialogsData[2].name} id={dialogsData[2].id}/>
-                <DialogItem name={dialogsData[3].name} id={dialogsData[3].id}/>
+
+                {dialogsElements}
+
             </div>
             <div className={dial.messages}>
-                <MessageU message={messagesData[0].message}/>
-                <MessageU message={messagesData[1].message}/>
-                <MessageU message={messagesData[2].message}/>
+                {messagesElements}
 
             </div>
         </div>
