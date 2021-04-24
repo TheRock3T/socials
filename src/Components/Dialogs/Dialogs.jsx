@@ -1,21 +1,8 @@
 import React from "react";
 import dial from "./Dialogs.module.css"
-import {NavLink} from "react-router-dom";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
-const DialogItem = (props) => {
-    let dialogId = '/dialogs/' + props.id
-    return (
-        <div className={dial.dialog + ' ' + dial.active}>
-            <NavLink to={dialogId}>{props.name}</NavLink>
-        </div>
-    )
-}
-
-const MessageU = (props) => {
-    return (
-        <div className={dial.message}>{props.message}</div>
-    )
-}
 
 const Dialogs = () => {
     /*Example database*/
@@ -34,7 +21,7 @@ const Dialogs = () => {
 
     let dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
 
-    let messagesElements = messagesData.map(msg => <MessageU message={msg.message}/> )
+    let messagesElements = messagesData.map(msg => <Message message={msg.message}/> )
 
     return (
         <div className={dial.dialogs}>
