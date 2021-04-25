@@ -3,7 +3,8 @@ import post from './MyPosts.module.css'
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-    let postsElements = props.postData.map(post => <Post message={post.message} likes={post.likes} dislikes={post.dislikes}/> )
+
+    let postsElements = props.state.postData.map(post => <Post message={post.message} likes={post.likes} dislikes={post.dislikes}/> )
 
     return (
         <div className={post.PostsBlock}>
