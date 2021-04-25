@@ -29,7 +29,7 @@ let postData = [
 ReactDOM.render(
 
   <React.StrictMode>
-    <App dialogsData={dialogsData} messagesData={messagesData} post={postData} />
+    <App dialogsData={dialogsData} messagesData={messagesData} postData={postData} />
 
   </React.StrictMode>,
   document.getElementById('root')
