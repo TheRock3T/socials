@@ -7,20 +7,24 @@ import Music from "./Components/Music/Music";
 import Videos from "./Components/Videos/Videos";
 import Settings from "./Components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
+import React from "react";
 
 
-const App = () => {
+const App = (props) => {
+
+
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/Dialogs' component={Dialogs}/>
-                    <Route path='/Profile' component={Profile}/>
-                    <Route path='/Music' component={Music}/>
-                    <Route path='/Videos' component={Videos}/>
-                    <Route path='/Settings' component={Settings}/>
+                    <Route path='/Dialogs' render={() => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />}/>
+                    <Route path='/Profile' render={() => <Profile postData={props.postData} />}/>
+                    <Route path='/Music' render={() => <Music />}/>
+                    <Route path='/Videos' render={() => <Videos />}/>
+                    <Route path='/Settings' render={() => <Settings />}/>
                 </div>
             </div>
         </BrowserRouter>
