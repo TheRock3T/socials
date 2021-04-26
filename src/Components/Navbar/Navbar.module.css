@@ -23,7 +23,27 @@
 }
 
 .item a:hover{
-
-
     color: #00a4b3;
 }
+
+.friendsList {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+
+}
+
+.friendItem {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.friendItem img{
+    width: 50px;
+
+}
+
