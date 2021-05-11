@@ -14,7 +14,9 @@
 }
 
 .messages {
-    padding: 10px;
+    padding: 20px 0 0 100px;
+
+    border-left: 2px solid #ffffff;
 }
 
 .messages .message {

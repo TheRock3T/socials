@@ -1,4 +1,4 @@
-
+import {rerenderEntireTree} from "../render";
 /*Example database*/
 
 let state = {
@@ -33,6 +33,17 @@ let state = {
             {name: 'Katya L.'}
         ]
     }
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likes: 0,
+        dislikes: 0
+    }
+    state.profilePage.postData.push(newPost)
+    rerenderEntireTree(state)
 }
 
 export default state
